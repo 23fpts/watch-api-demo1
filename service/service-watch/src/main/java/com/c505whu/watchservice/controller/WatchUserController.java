@@ -15,7 +15,11 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("watchuser")
+@CrossOrigin
 public class WatchUserController {
+
+
+
     @Autowired
     private WatchUserService userService;
 

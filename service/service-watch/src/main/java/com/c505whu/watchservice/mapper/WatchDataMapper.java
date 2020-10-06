@@ -2,6 +2,7 @@ package com.c505whu.watchservice.mapper;
 
 import com.c505whu.watchservice.entity.WatchData;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author thc
  * @since 2020-10-06
  */
+@Repository
 public interface WatchDataMapper extends BaseMapper<WatchData> {
 
 }

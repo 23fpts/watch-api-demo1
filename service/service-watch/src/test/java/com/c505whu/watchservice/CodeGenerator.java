@@ -13,7 +13,7 @@ import org.junit.Test;
 public class CodeGenerator {
 
     // 要生成的表名
-    private static String[] tables = { "watch_data", "watch_user" };
+    private static String[] tables = { "watch_data" };
 
     // 输出的地方
     private static String outputDir = "Users/thc/Documents/web_project/watch/tempo" ;

@@ -60,7 +60,7 @@ public class SwaggerConfig {
     private ApiInfo webApiInfo(){
 
         return new ApiInfoBuilder()
-                .title("网站-thc-auth")
+                .title("网站-watch-api")
                 .description("本文档描述了课程中心微服务接口定义")
                 .version("1.0")
                 .contact(new Contact("thc", "http://thc.com", "120698463@qq.com"))

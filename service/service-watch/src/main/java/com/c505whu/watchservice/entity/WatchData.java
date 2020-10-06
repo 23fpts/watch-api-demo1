@@ -1,11 +1,10 @@
 package com.c505whu.watchservice.entity;
 
 import java.math.BigDecimal;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
+
+import com.baomidou.mybatisplus.annotation.*;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,7 +25,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("watch_data")
 @ApiModel(value="WatchData对象", description="实时数据")
-public class WatchData extends Model<WatchData> {
+public class WatchData implements Serializable{
 
     private static final long serialVersionUID=1L;
 
@@ -83,16 +82,16 @@ public class WatchData extends Model<WatchData> {
     private BigDecimal latitude;
 
     @ApiModelProperty(value = "创建时间")
+    @TableField(value = "gmt_create", fill = FieldFill.INSERT)
     private Date gmtCreate;
 
+    @ApiModelProperty(value = "更新时间")
+    @TableField(value = "gmt_modified", fill = FieldFill.INSERT_UPDATE)
+    private Date gmtModified;
+
     @ApiModelProperty(value = "删除状态（1:删除，0:没删除）")
-    @TableField("is_deleted")
+    @TableField(value = "is_deleted", fill = FieldFill.INSERT)
     private Boolean deleted;
 
-
-    @Override
-    protected Serializable pkVal() {
-        return this.id;
-    }
 
 }

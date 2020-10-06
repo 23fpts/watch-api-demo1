@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author thc
- * @since 2020-10-05
+ * @since 2020-10-06
  */
 @Service
 public class WatchDataServiceImpl extends ServiceImpl<WatchDataMapper, WatchData> implements WatchDataService {
